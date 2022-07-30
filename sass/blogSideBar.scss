@@ -1,0 +1,255 @@
+// Import Global Rules
+@import "sass/layout/global-rules";
+// Import Media Queries Mixin
+@import "sass/helpers/mixins";
+// Import Variables
+@import "sass/helpers/variables";
+
+// Start Header
+header {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: transparent !important;
+    z-index: 2;
+    li {
+      margin: 0 15px;
+      letter-spacing: 0.5px;
+    }
+    .navbar-brand {
+      span {
+        color: $main-color;
+      }
+    }
+    .tele {
+      i,
+      span {
+        color: $main-color;
+      }
+    }
+  
+    a {
+      transition: 0.3s;
+      &:not(.navbar-brand):hover {
+        color: $main-color !important;
+      }
+    }
+    .dropdown-menu {
+      padding: 2em;
+      background-color: #1c1c1c;;
+      text-align: center;
+      width: 250px;
+      .dropdown-item {
+        padding: 0;
+        color: white;
+        margin: 0.7em 0;
+          &:hover {
+            background-color: transparent;
+          }
+      }
+    }
+  }
+// End Header
+// Start Landing
+.landing {
+    background-image: url("../images/bg-image-2-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 43vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    &::before {
+      @include overlay(black, 0.8);
+    }
+    .container {
+      text-align: center;
+      p {
+        color: white;
+        a {
+            text-decoration: none;
+            color: $main-color;
+            border-left: 3px solid white;
+            padding-left: 1em;
+        }
+      }
+      h1 {
+        line-height: 1;
+        color: white;
+        font-size: 3em;
+        margin: 0;
+        width: 100%;
+        span {
+          color: $main-color;
+        }
+      }
+     
+    }
+  }
+// End Landing
+// Start Blog
+.blog {
+    background: #f0f2f4;
+    padding: 6em;
+    .container {
+        .row {
+            h5 {
+                margin: 3em 0 1em 0;
+            }
+            .col-md {
+                background-color: white;
+            }
+            .post {
+                padding: 2em 1em;
+                p {
+                    color: rgba(0, 0, 0, 0.6);
+                }
+                a:not(:last-child) {
+                    font-size: 1.7em;
+                    text-decoration: none;
+                    color: black;
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+                & > :last-child {
+                    text-decoration: none;
+                    color: $main-color;
+                }
+            }
+            .col-3 {
+                h5 {
+                    i {
+                        color: $main-color;
+                    }
+                }
+                .justify-content-between {
+                    p {
+                        border-radius: 30%;
+                        padding: 2px 5px;
+                        background-color: $main-color;
+                        color: white;
+                    }
+                }
+                input {
+                    position: relative;
+                    &::after {
+                        content: "\f099";
+                        font-family: "Font Awesome 5 Brands"; 
+                        font-weight: 400;
+                        position: absolute;
+                        color: black;
+                        top: 50%;
+                        right: 5%;
+                    }
+                }
+                a {
+                    transition: .3s;
+                    &:hover {
+                        color: $main-color !important;
+                    }
+                }
+            }
+        }
+        .pagination {
+            .page-item {
+                .page-link {
+                    color: $main-color;
+                }
+            }
+            
+        }
+        .page-item.active .page-link {
+            background-color: $main-color !important;
+            color: white;
+            border: none;
+        }
+
+    }
+}
+// End Blog
+// Start Footer
+footer {
+    background-color: #181a23;
+    padding: 5em 3em;
+    .container {
+      color: white;
+      .desc {
+        width: 30%;
+        h1 {
+          margin: 0 0 .7em;
+          font-size: 2em;
+        }
+        p {
+          color: #fff;
+          opacity: .8;
+          font-size: 14px;
+        }
+      }
+    }
+    .links {
+      h4 {
+        white-space: nowrap;
+      }
+    }
+    ul {
+      a {
+        color: #fff !important;
+        opacity: .8;
+        font-size: 14px;
+        &:hover {
+          color: $main-color !important;
+        }
+      }
+    }
+    .location {
+      address , .info {
+        color: #fff !important;
+        opacity: .8;
+        font-size: 14px;
+      } 
+    }
+    .copyright {
+      padding: 20px 35px;
+      background-color: black;
+      color: #666;
+      span {
+        color: $main-color;
+      }
+     }
+  }
+  @include breakpoints(medium) {
+    footer {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        .desc {
+          width: 100%;
+        }
+      }
+    } 
+  }
+  @include breakpoints(small) {
+    footer {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        .desc {
+          width: 100%;
+        }
+      }
+    } 
+  }
+  @include breakpoints(mobile) {
+    footer {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        .desc {
+          width: 100%;
+        }
+      }
+    } 
+  }
+// End Footer
