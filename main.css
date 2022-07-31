@@ -126,7 +126,7 @@ body {
 }
 
 .display {
-  overflow: scroll;
+  overflow: auto;
 }
 .display table {
   margin: 1em auto;
