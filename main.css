@@ -125,22 +125,25 @@ body {
   margin-bottom: 0;
 }
 
-table {
+.display {
+  overflow: scroll;
+}
+.display table {
   margin: 1em auto;
   width: 90%;
   color: white;
   border-collapse: collapse;
 }
-table tr {
+.display table tr {
   text-align: center;
 }
-table th,
-table td {
+.display table th,
+.display table td {
   border-top: 5px solid white;
   border-bottom: 5px solid white;
   padding: 1em;
 }
-table button {
+.display table button {
   color: white;
   background-color: #175689;
   transition: 0.5s;
@@ -148,7 +151,7 @@ table button {
   border-radius: 1em;
   padding: 1em;
 }
-table button:hover {
+.display table button:hover {
   letter-spacing: 2px;
   background-color: #0f4169;
   cursor: pointer;

@@ -105,32 +105,35 @@ body {
   }
 // ُEnd Input
 // Start Output
-table {
-  tr {
-    text-align: center;
-  }
-  margin: 1em auto;
-  width: 90%;
-  color: white;
-  border-collapse: collapse;
-  th,
-  td {
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    padding: 1em;
-  } 
-  button {
+.display {
+  overflow: scroll;
+  table {
+    tr {
+      text-align: center;
+    }
+    margin: 1em auto;
+    width: 90%;
     color: white;
-    background-color: $buttons_color;
-    transition: 0.5s;
-    border: none;
-    border-radius: 1em;
-    padding: 1em;
-    &:hover {
-        letter-spacing: 2px;
-        background-color: #0f4169;
-        cursor: pointer;
-      }
+    border-collapse: collapse;
+    th,
+    td {
+      border-top: 5px solid white;
+      border-bottom: 5px solid white;
+      padding: 1em;
+    } 
+    button {
+      color: white;
+      background-color: $buttons_color;
+      transition: 0.5s;
+      border: none;
+      border-radius: 1em;
+      padding: 1em;
+      &:hover {
+          letter-spacing: 2px;
+          background-color: #0f4169;
+          cursor: pointer;
+        }
+    }
   }
 }
 // End Output
