@@ -1,0 +1,136 @@
+@import "sass/layout/global-rules";
+@import "sass/helpers/variables";
+// Start Input
+body {
+  background: rgb(92,45,157);
+  background: radial-gradient(circle, rgba(92,45,157,1) 0%, rgba(38,27,30,1) 100%);
+  // min-height: 600vh;
+  max-height: fit-content;
+}
+.container {
+  text-align: center;
+  h1 {
+    font-size: 6em;
+    margin: 0;
+    color: $buttons_color;
+  }
+  p {
+    color: $secondary_color;
+    margin-top: 0;
+  }
+  form {
+    .total {
+      background-color: red;
+      color: white;
+      padding: 1em;
+      width: fit-content;
+      margin: auto;
+      margin-top: 1em;
+      border-radius: 1em;
+      transition: .3s;
+    }
+    input {
+      margin: auto;
+      padding: 1em;
+      background-color: $main_color;
+      border: none;
+      border-radius: 1em;
+      caret-color: $buttons_color;
+      color: white;
+      transition: .5s;
+      &:focus {
+        outline: 2px solid $secondary_color;
+        background-color: #000;
+        transform: scale(1.1);
+      }
+      &[type="submit"] {
+        width: 75%;
+        color: white;
+        background-color: $buttons_color;
+        transition: 0.5s;
+        display: block;
+        &:hover {
+          letter-spacing: 2px;
+          background-color: #0f4169;
+          cursor: pointer;
+        }
+      }
+    }
+    input:nth-child(1) {
+      width: 75%;
+      display: block;
+      margin-bottom: 1em;
+    }
+    @for $i from 2 through 5 {
+      input:nth-child(#{$i}) {
+        width: 18.5%;
+      }
+    }
+    @for $i from 7 through 8 {
+      input:nth-child(#{$i}) {
+        width: 75%;
+        display: block;
+        margin: 1em auto;
+      }
+    }
+    input:nth-child(10) {
+      width: 75%;
+      display: block;
+      margin-top: 1em;
+    }
+    button {
+      color: white;
+      background-color: $buttons_color;
+      transition: 0.5s;
+      display: block;
+      margin: 1em auto;
+      padding: 1em;
+      border: none;
+      border-radius: 1em;
+      caret-color: $buttons_color;
+      &:hover {
+        letter-spacing: 2px;
+        background-color: #0f4169;
+        cursor: pointer;
+      }
+    }
+    @for $i from 11 through 12 {
+      button:nth-child(#{$i}) {
+          width: 37.5%;
+          display: inline-block;
+          margin-bottom: 0;
+        } 
+      }
+    }
+  }
+// ُEnd Input
+// Start Output
+table {
+  tr {
+    text-align: center;
+  }
+  margin: 1em auto;
+  width: 90%;
+  color: white;
+  border-collapse: collapse;
+  th,
+  td {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 1em;
+  } 
+  button {
+    color: white;
+    background-color: $buttons_color;
+    transition: 0.5s;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    &:hover {
+        letter-spacing: 2px;
+        background-color: #0f4169;
+        cursor: pointer;
+      }
+  }
+}
+// End Output
